@@ -71,3 +71,13 @@ var x = setInterval(function() {
     document.getElementById("countdown-event").innerHTML = "Sale Ended";
   }
 }, 1000);
+// Scroll up/down
+	   function auto_scroll(anchor) {
+            var target = jQuery(anchor);
+            target = target.length && target || jQuery('[name=' + anchor.slice(1) + ']');
+            if (target.length) {
+                var targetOffset = target.offset().top - 49;
+                jQuery('html,body').animate({scrollTop: targetOffset}, 600);
+                return false;
+            }
+        }
