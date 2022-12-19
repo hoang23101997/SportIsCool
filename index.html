@@ -7,6 +7,7 @@
     <title>SportIsCool</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="Style/style.css">
+    <link rel="icon" type="image/x-icon" href="Asset/SportIsCool.png">
     <author>Hoang Le Bui</author>
 </head>
 <body>
@@ -25,9 +26,9 @@
           <div class="sub_res_menu">
             <a href="">Home Page</a>
             <a onclick="javascript:auto_scroll('.about-us')">About Us</a>
-            <a onclick="javascript:auto_scroll('#category-container')">Our Products </a>
-            <a href="#">Brands </a>
             <a onclick="javascript:auto_scroll('.header-collection')">Our Collections </a>
+            <a onclick="javascript:auto_scroll('.category-container')">Our Products </a>
+            <a onclick="javascript:auto_scroll('.brands_title')">Brands </a>
             <a onclick="javascript:auto_scroll('.customer-support')">Customer Services </a>
             <a onclick="javascript:auto_scroll('.contact-us')">Contact Us  </a>
           </div>
@@ -50,18 +51,12 @@
          <a class = "Short" onclick="javascript:auto_scroll('.men_sport_short')"> Shorts </a>
         </div>
         </div>
-        <div class="sign_in_container">
-            <div class='sign_in'>
-            <a href="#"> Sign In </a> 
+
+            <div class='your_cart'> 
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i> 
             </div>
-            <div class='sign_up'>
-            <a href="#"> Sign Up </a> 
-             </div>  
-            <div class='your_cart'>
-            <a href="#">
-                <i class="fa-solid fa-cart-shopping"></i> </a> 
-            </div>
-        </div>
+            <span class="cart-numbers"> 0 </span>
+        
 </div>
 <!-- Normal Menu -->
 <div class="menu_container">
@@ -69,6 +64,7 @@
       <ul>
         <li><a href="">Home Page</a></li>
         <li><a onclick="javascript:auto_scroll('.about-us')">About Us</a></li>
+        <li><a onclick="javascript:auto_scroll('.header-collection')"> Our Collections </a></li>
         <div class="sub_menu">
           <a onclick="javascript:auto_scroll('.category-container')"> Our Products </a>
           <div class="sub_menu_content">
@@ -79,8 +75,7 @@
             <li><a onclick="javascript:auto_scroll('.header-collection')">New Arrival</a> </li>
           </div>
         </div>
-        <li><a onclick="javascript:auto_scroll('.header-collection')"> Our Collections </a></li>
-        <li><a href="#"> Brands </a></li>
+        <li><a onclick="javascript:auto_scroll('.brands_title')"> Brands </a></li>
         <li><a onclick="javascript:auto_scroll('.customer-support')"> Customer Services </a></li>
         <li><a onclick="javascript:auto_scroll('.contact-us')"> Contact Us </a></li>
       </ul>
@@ -89,26 +84,16 @@
     <div class="cart">
         <h2 class="cart-title"> Your Cart</h2>
         <div class="cart-content">
-            <div class="cart-box">
-                <img src="Asset/Products/basketball_shoes.jpg" class="cart-img">
-                <div class="detail-box">
-                    <div class="cart-product-title">
-                        Basketball Is Awesome
-                    </div>
-                    <div class="cart-prize">$119.90</div>
-                    <input type="number" value="1" class="cart-quantity">
-                </div>
-                <i class="fa-solid fa-trash"></i>
-            </div>
+
+    </div>
+    <div class="total">
+        <div class="total-title">
+            Total
         </div>
-        <div class="total">
-            <div class="total-title">
-                Total
-            </div>
-            <div class="total-prize">
-                $0
-            </div>
+        <div class="total-price">
+            $0
         </div>
+    </div>
         <button type="button" class="btn-buy">Buy Now</button>
         <i class="fa-solid fa-xmark" id="close-cart"></i>
     </div>
@@ -224,18 +209,18 @@
         <div class="row">
           <div class="men_shirts">
               <div class="product-grid">
-                  <div class="product-image">
-                      <a href="#" class="image">
-                          <img class="pic-1" src="Asset/Products/Men_Shirt_Products_4.jpg">
-                          <img class="pic-2" src="Asset/Products/Men_Shirt_Products_5.jpg">
-                      </a>
-                      <span class="product-hot-label">hot</span>
-                      <ul class="product-links">
-                          <li><a href="#"><i class="far fa-heart"></i></a></li>
-                          <li><a href="#"><i class="fa fa-search"></i></a></li>
-                      </ul>
-                  </div>
                   <div class="product-content">
+                    <div class="product-image">
+                        <a href="#" class="image">
+                            <img class="pic-1" src="Asset/Products/Men_Shirt_Products_4.jpg">
+                            <img class="pic-2" src="Asset/Products/Men_Shirt_Products_5.jpg">
+                        </a>
+                        <span class="product-hot-label">hot</span>
+                        <ul class="product-links">
+                            <li><a href="#"><i class="far fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
                       <ul class="rating">
                           <li class="fa fa-star"></li>
                           <li class="fa fa-star"></li>
@@ -245,26 +230,27 @@
                           <li>(128)</li>
                       </ul>
                       <h3 class="title"><a href="#">Men's Sport Shirt</a></h3>
-                      <div class="price">$59.00</div>
-                      <a href="#" class="add-to-cart">Add to cart</a>
+                      <div class="price"> <span class="pricesale">$49.00</span></div>
+                      <a class="add-to-cart">Add to cart</a>
                   </div>
               </div>
           </div>
           <div class="women_shirt">
               <div class="product-grid">
-                  <div class="product-image">
-                      <a href="#" class="image">
-                          <img class="pic-1" src="Asset/Products/Women_Shirt_Products_1.jpg">
-                          <img class="pic-2" src="Asset/Products/Women_Shirt_Products_3.jpg">
-                      </a>
-                      <span class="product-hot-label">hot</span>
-                      <span class="product-discount-label">-50%</span>
-                      <ul class="product-links">
-                          <li><a href="#"><i class="far fa-heart"></i></a></li>
-                          <li><a href="#"><i class="fa fa-search"></i></a></li>
-                      </ul>
-                  </div>
+
                   <div class="product-content">
+                    <div class="product-image">
+                        <a href="#" class="image">
+                            <img class="pic-1" src="Asset/Products/Women_Shirt_Products_1.jpg">
+                            <img class="pic-2" src="Asset/Products/Women_Shirt_Products_3.jpg">
+                        </a>
+                        <span class="product-hot-label">hot</span>
+                        <span class="product-discount-label">-50%</span>
+                        <ul class="product-links">
+                            <li><a href="#"><i class="far fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
                       <ul class="rating">
                           <li class="fa fa-star"></li>
                           <li class="fa fa-star"></li>
@@ -274,18 +260,17 @@
                           <li>(326)</li>
                       </ul>
                       <h3 class="title"><a href="#">Women's Sport Shirt</a></h3>
-                      <div class="price"><span>$49.00</span> $24.50</div>
-                      <a href="#" class="add-to-cart">Add to cart</a>
+                      <div class="price"> <span class="price-origin">$49.00</span> <span class="pricesale"> $24.50 </span></div>
+                      <a class="add-to-cart">Add to cart</a>
                   </div>
               </div>
           </div>
           <div class="soccer_shirt">
             <div class="product-grid">
-                <div class="product-image">
-                    <a href="#" class="image">
-                        <img class="pic-1" src="Asset/Products/Men_Shirt_Products_1.jpg">
+                <div class="product-content">
+                    <div class="product-image">
+                        <img src="Asset/Products/Men_Shirt_Products_1.jpg" class="pic-1">
                         <img class="pic-2" src="Asset/Products/Men_Shirt_Products_2.jpg">
-                    </a>
                     <span class="product-hot-label">
                       <i class="fa-solid fa-fire"></i> Special</span>
                     <span class="product-discount-label">-60%</span>
@@ -294,7 +279,6 @@
                         <li><a href="#"><i class="fa fa-search"></i></a></li>
                     </ul>
                 </div>
-                <div class="product-content">
                     <ul class="rating">
                         <li class="fa fa-star"></li>
                         <li class="fa fa-star"></li>
@@ -305,27 +289,28 @@
                         <li>(2,5k)</li>
                     </ul>
                     <h3 class="title"><a href="#">Soccer Is Cool</a></h3>
-                    <div class="price"><span>$89.90</span> $36.50</div>
-                    <a href="#" class="add-to-cart">Add to cart</a>
+                    <div class="price"> <span class="price-origin">$89.90</span> <span class="pricesale"> $36.50 </span></div>
+                    <a class="add-to-cart">Add to cart</a>
                 </div>
             </div>
         </div>
         <div class="nba_shirt">
           <div class="product-grid">
-              <div class="product-image">
-                  <a href="#" class="image">
-                      <img class="pic-1" src="Asset/Products/NBA_Shirt_Products_1.jpg">
-                      <img class="pic-2" src="Asset/Products/NBA_Shirt_Products_2.jpg">
-                  </a>
-                  <span class="product-hot-label">
-                    <i class="fa-solid fa-fire"></i> Special</span>
-                  <span class="product-discount-label">-60%</span>
-                  <ul class="product-links">
-                      <li><a href="#"><i class="far fa-heart"></i></a></li>
-                      <li><a href="#"><i class="fa fa-search"></i></a></li>
-                  </ul>
-              </div>
+            
               <div class="product-content">
+                <div class="product-image">
+                    <a href="#" class="image">
+                        <img class="pic-1" src="Asset/Products/NBA_Shirt_Products_1.jpg">
+                        <img class="pic-2" src="Asset/Products/NBA_Shirt_Products_2.jpg">
+                    </a>
+                    <span class="product-hot-label">
+                      <i class="fa-solid fa-fire"></i> Special</span>
+                    <span class="product-discount-label">-60%</span>
+                    <ul class="product-links">
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
                   <ul class="rating">
                       <li class="fa fa-star"></li>
                       <li class="fa fa-star"></li>
@@ -336,29 +321,30 @@
                       <li>(2,2k)</li>
                   </ul>
                   <h3 class="title"><a href="#">Basketball Is Cool</a></h3>
-                  <div class="price"><span>$99.90</span> $49.99</div>
-                  <a href="#" class="add-to-cart">Add to cart</a>
+                  <div class="price"> <span class="price-origin">$99.00</span> <span class="pricesale"> $49.99 </span></div>
+                  <a class="add-to-cart">Add to cart</a>
               </div>
           </div>
       </div>
               <div class="sport_shoes"> 
                 <div class="product-grid">
-                    <div class="product-image">
-                        <a href="#" class="image">
-                            <img class="pic-1" src="Asset/Products/Sport_Shoes_Products_3.jpg">
-                            <img class="pic-2" src="Asset/Products/Sport_Shoes_Products_4.jpg">
-                        </a>
-                        <span class="product-hot-label">
-                          <i class="fa-solid fa-fire"></i>
-                          hot
-                        </span>
-                        <span class="product-discount-label">-40%</span>
-                        <ul class="product-links">
-                            <li><a href="#"><i class="far fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-search"></i></a></li>
-                        </ul>
-                    </div>
+                   
                     <div class="product-content">
+                        <div class="product-image">
+                            <a href="#" class="image">
+                                <img class="pic-1" src="Asset/Products/Sport_Shoes_Products_3.jpg">
+                                <img class="pic-2" src="Asset/Products/Sport_Shoes_Products_4.jpg">
+                            </a>
+                            <span class="product-hot-label">
+                              <i class="fa-solid fa-fire"></i>
+                              hot
+                            </span>
+                            <span class="product-discount-label">-40%</span>
+                            <ul class="product-links">
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            </ul>
+                        </div>
                         <ul class="rating">
                             <li class="fa fa-star"></li>
                             <li class="fa fa-star"></li>
@@ -368,29 +354,30 @@
                             <li>(988)</li>
                         </ul>
                         <h3 class="title"><a href="#">Men Shoes For Running</a></h3>
-                        <div class="price"><span>$99.00</span> $59.99</div>
-                        <a href="#" class="add-to-cart">Add to cart</a>
+                        <div class="price"> <span class="price-origin">$99.00</span> <span class="pricesale"> $59.99 </span></div>
+                        <a class="add-to-cart">Add to cart</a>
                     </div>
                 </div>
           </div>
           <div class="women_sport_shoes"> 
             <div class="product-grid">
-                <div class="product-image">
-                    <a href="#" class="image">
-                        <img class="pic-1" src="Asset/Products/Women_Shoes_Products_2.jpg">
-                        <img class="pic-2" src="Asset/Products/Women_Shoes_Products_3.jpg">
-                    </a>
-                    <span class="product-hot-label">
-                      <i class="fa-solid fa-fire"></i>
-                      hot
-                    </span>
-                    <span class="product-discount-label">-50%</span>
-                    <ul class="product-links">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    </ul>
-                </div>
+                
                 <div class="product-content">
+                    <div class="product-image">
+                        <a href="#" class="image">
+                            <img class="pic-1" src="Asset/Products/Women_Shoes_Products_2.jpg">
+                            <img class="pic-2" src="Asset/Products/Women_Shoes_Products_3.jpg">
+                        </a>
+                        <span class="product-hot-label">
+                          <i class="fa-solid fa-fire"></i>
+                          hot
+                        </span>
+                        <span class="product-discount-label">-50%</span>
+                        <ul class="product-links">
+                            <li><a href="#"><i class="far fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
                     <ul class="rating">
                         <li class="fa fa-star"></li>
                         <li class="fa fa-star"></li>
@@ -400,29 +387,30 @@
                         <li>(872)</li>
                     </ul>
                     <h3 class="title"><a href="#"> Women's Athletic Shoes</a></h3>
-                    <div class="price"><span>$99.00</span> $49.99</div>
-                    <a href="#" class="add-to-cart">Add to cart</a>
+                    <div class="price"> <span class="price-origin">$99.00</span> <span class="pricesale"> $49.99 </span></div>
+                    <a class="add-to-cart">Add to cart</a>
                 </div>
             </div>
           </div>
           <div class="soccer_shoes"> 
             <div class="product-grid">
-                <div class="product-image">
-                    <a href="#" class="image">
-                        <img class="pic-1" src="Asset/Products/soccer_shoes_products_1.jpg">
-                        <img class="pic-2" src="Asset/Products/soccer_shoes_products_2.jpg">
-                    </a>
-                    <span class="product-hot-label">
-                      <i class="fa-solid fa-fire"></i>
-                      Special
-                    </span>
-                    <span class="product-discount-label">-50%</span>
-                    <ul class="product-links">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    </ul>
-                </div>
+               
                 <div class="product-content">
+                    <div class="product-image">
+                        <a href="#" class="image">
+                            <img class="pic-1" src="Asset/Products/soccer_shoes_products_1.jpg">
+                            <img class="pic-2" src="Asset/Products/soccer_shoes_products_2.jpg">
+                        </a>
+                        <span class="product-hot-label">
+                          <i class="fa-solid fa-fire"></i>
+                          Special
+                        </span>
+                        <span class="product-discount-label">-50%</span>
+                        <ul class="product-links">
+                            <li><a href="#"><i class="far fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
                     <ul class="rating">
                         <li class="fa fa-star"></li>
                         <li class="fa fa-star"></li>
@@ -433,29 +421,30 @@
                         <li>(1,9k)</li>
                     </ul>
                     <h3 class="title"><a href="#"> Soccer Is Awesome </a></h3>
-                    <div class="price"><span>$199.90</span> $99.90</div>
-                    <a href="#" class="add-to-cart">Add to cart</a>
+                    <div class="price"> <span class="price-origin">$199.90</span> <span class="pricesale"> $99.90 </span></div>
+                    <a class="add-to-cart">Add to cart</a>
                 </div>
             </div>
           </div>
           <div class="basketball_shoes"> 
             <div class="product-grid">
-                <div class="product-image">
-                    <a href="#" class="image">
-                        <img class="pic-1" src="Asset/Products/basketball_shoes_2.jpg">
-                        <img class="pic-2" src="Asset/Products/basketball_shoes.jpg">
-                    </a>
-                    <span class="product-hot-label">
-                      <i class="fa-solid fa-fire"></i>
-                      Special
-                    </span>
-                    <span class="product-discount-label">-40%</span>
-                    <ul class="product-links">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    </ul>
-                </div>
+                
                 <div class="product-content">
+                    <div class="product-image">
+                        <a href="#" class="image">
+                            <img class="pic-1" src="Asset/Products/basketball_shoes_2.jpg">
+                            <img class="pic-2" src="Asset/Products/basketball_shoes.jpg">
+                        </a>
+                        <span class="product-hot-label">
+                          <i class="fa-solid fa-fire"></i>
+                          Special
+                        </span>
+                        <span class="product-discount-label">-40%</span>
+                        <ul class="product-links">
+                            <li><a href="#"><i class="far fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
                     <ul class="rating">
                         <li class="fa fa-star"></li>
                         <li class="fa fa-star"></li>
@@ -466,25 +455,26 @@
                         <li>(1,8k)</li>
                     </ul>
                     <h3 class="title"><a href="#"> Basketball Is Awesome </a></h3>
-                    <div class="price"><span>$199.90</span> $119.90</div>
-                    <a href="#" class="add-to-cart">Add to cart</a>
+                    <div class="price"> <span class="price-origin">$199.90</span> <span class="pricesale"> $119.90 </span></div>
+                    <a class="add-to-cart">Add to cart</a>
                 </div>
             </div>
           </div>
           <div class="men_sport_short">
             <div class="product-grid">
-                <div class="product-image">
-                    <a href="#" class="image">
-                        <img class="pic-1" src="Asset/Products/Men_Short_1.jpg">
-                        <img class="pic-2" src="Asset/Products/men_Short_2.jpg">
-                    </a>
-                    <span class="product-hot-label">hot</span>
-                    <ul class="product-links">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    </ul>
-                </div>
+                
                 <div class="product-content">
+                    <div class="product-image">
+                        <a href="#" class="image">
+                            <img class="pic-1" src="Asset/Products/Men_Short_1.jpg">
+                            <img class="pic-2" src="Asset/Products/men_Short_2.jpg">
+                        </a>
+                        <span class="product-hot-label">hot</span>
+                        <ul class="product-links">
+                            <li><a href="#"><i class="far fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
                     <ul class="rating">
                         <li class="fa fa-star"></li>
                         <li class="fa fa-star"></li>
@@ -494,26 +484,27 @@
                         <li>(128)</li>
                     </ul>
                     <h3 class="title"><a href="#">Men's Sport Short</a></h3>
-                    <div class="price">$59.00</div>
-                    <a href="#" class="add-to-cart">Add to cart</a>
+                    <div class="price"> <span class="pricesale"> $59.00 </span></div>
+                    <a class="add-to-cart">Add to cart</a>
                 </div>
             </div>
         </div>
         <div class="women_sport_short">
             <div class="product-grid">
-                <div class="product-image">
-                    <a href="#" class="image">
-                        <img class="pic-1" src="Asset/Products/Women_Short_Products_1.jpg">
-                        <img class="pic-2" src="Asset/Products/Women_Short_Products_2.jpg">
-                    </a>
-                    <span class="product-hot-label">hot</span>
-                    <span class="product-discount-label">-50%</span>
-                    <ul class="product-links">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    </ul>
-                </div>
+               
                 <div class="product-content">
+                    <div class="product-image">
+                        <a href="#" class="image">
+                            <img class="pic-1" src="Asset/Products/Women_Short_Products_1.jpg">
+                            <img class="pic-2" src="Asset/Products/Women_Short_Products_2.jpg">
+                        </a>
+                        <span class="product-hot-label">hot</span>
+                        <span class="product-discount-label">-50%</span>
+                        <ul class="product-links">
+                            <li><a href="#"><i class="far fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
                     <ul class="rating">
                         <li class="fa fa-star"></li>
                         <li class="fa fa-star"></li>
@@ -523,27 +514,28 @@
                         <li>(326)</li>
                     </ul>
                     <h3 class="title"><a href="#">Women's Sport Short</a></h3>
-                    <div class="price"><span>$49.00</span> $24.50</div>
-                    <a href="#" class="add-to-cart">Add to cart</a>
+                    <div class="price"> <span class="price-origin">$49.00</span> <span class="pricesale"> $24.50 </span></div>
+                    <a class="add-to-cart">Add to cart</a>
                 </div>
             </div>
         </div>
         <div class="soccer_short">
           <div class="product-grid">
-              <div class="product-image">
-                  <a href="#" class="image">
-                      <img class="pic-1" src="Asset/Products/soccer_short_products_2.jpg">
-                      <img class="pic-2" src="Asset/Products/soccer_short_products_3.jpg">
-                  </a>
-                  <span class="product-hot-label">
-                    <i class="fa-solid fa-fire"></i> Special</span>
-                  <span class="product-discount-label">-60%</span>
-                  <ul class="product-links">
-                      <li><a href="#"><i class="far fa-heart"></i></a></li>
-                      <li><a href="#"><i class="fa fa-search"></i></a></li>
-                  </ul>
-              </div>
+              
               <div class="product-content">
+                <div class="product-image">
+                    <a href="#" class="image">
+                        <img class="pic-1" src="Asset/Products/soccer_short_products_2.jpg">
+                        <img class="pic-2" src="Asset/Products/soccer_short_products_3.jpg">
+                    </a>
+                    <span class="product-hot-label">
+                      <i class="fa-solid fa-fire"></i> Special</span>
+                    <span class="product-discount-label">-60%</span>
+                    <ul class="product-links">
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
                   <ul class="rating">
                       <li class="fa fa-star"></li>
                       <li class="fa fa-star"></li>
@@ -554,27 +546,28 @@
                       <li>(2,5k)</li>
                   </ul>
                   <h3 class="title"><a href="#">Soccer Is Fun</a></h3>
-                  <div class="price"><span>$89.90</span> $36.50</div>
-                  <a href="#" class="add-to-cart">Add to cart</a>
+                  <div class="price"> <span class="price-origin">$89.90</span> <span class="pricesale"> $36.50 </span></div>
+                  <a class="add-to-cart">Add to cart</a>
               </div>
           </div>
       </div>
       <div class="nba_short">
         <div class="product-grid">
-            <div class="product-image">
-                <a href="#" class="image">
-                    <img class="pic-1" src="Asset/Products/NBA_Short_Products_1.jpg">
-                    <img class="pic-2" src="Asset/Products/NBA_Short_Products_2.jpg">
-                </a>
-                <span class="product-hot-label">
-                  <i class="fa-solid fa-fire"></i> Special</span>
-                <span class="product-discount-label">-60%</span>
-                <ul class="product-links">
-                    <li><a href="#"><i class="far fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
-                </ul>
-            </div>
+           
             <div class="product-content">
+                <div class="product-image">
+                    <a href="#" class="image">
+                        <img class="pic-1" src="Asset/Products/NBA_Short_Products_1.jpg">
+                        <img class="pic-2" src="Asset/Products/NBA_Short_Products_2.jpg">
+                    </a>
+                    <span class="product-hot-label">
+                      <i class="fa-solid fa-fire"></i> Special</span>
+                    <span class="product-discount-label">-60%</span>
+                    <ul class="product-links">
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
                 <ul class="rating">
                     <li class="fa fa-star"></li>
                     <li class="fa fa-star"></li>
@@ -585,26 +578,27 @@
                     <li>(2,2k)</li>
                 </ul>
                 <h3 class="title"><a href="#">Basketball Is Fun</a></h3>
-                <div class="price"><span>$99.90</span> $49.99</div>
-                <a href="#" class="add-to-cart">Add to cart</a>
+                <div class="price"> <span class="price-origin">$99.90</span> <span class="pricesale"> $49.99 </span></div>
+                <a class="add-to-cart">Add to cart</a>
             </div>
         </div>
 
       </div>
       <div class="swimming_hat">
         <div class="product-grid">
-            <div class="product-image">
-                <a href="#" class="image">
-                    <img class="pic-1" src="Asset/Products/Swiming_Hat_1.jpg">
-                    <img class="pic-2" src="Asset/Products/Swiming_Hat_2.jpg">
-                </a>
-                <span class="product-hot-label">hot</span>
-                <ul class="product-links">
-                    <li><a href="#"><i class="far fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
-                </ul>
-            </div>
+            
             <div class="product-content">
+                <div class="product-image">
+                    <a href="#" class="image">
+                        <img class="pic-1" src="Asset/Products/Swiming_Hat_1.jpg">
+                        <img class="pic-2" src="Asset/Products/Swiming_Hat_2.jpg">
+                    </a>
+                    <span class="product-hot-label">hot</span>
+                    <ul class="product-links">
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
                 <ul class="rating">
                     <li class="fa fa-star"></li>
                     <li class="fa fa-star"></li>
@@ -614,26 +608,27 @@
                     <li>(128)</li>
                 </ul>
                 <h3 class="title"><a href="#">Swimming Is Easy </a></h3>
-                <div class="price">$59.00</div>
-                <a href="#" class="add-to-cart">Add to cart</a>
+                <div class="price"> <span class="pricesale"> $49.99 </span></div>
+                <a class="add-to-cart">Add to cart</a>
             </div>
         </div>
     </div>
     <div class="racing_hat">
         <div class="product-grid">
-            <div class="product-image">
-                <a href="#" class="image">
-                    <img class="pic-1" src="Asset/Products/Ferrari_Hat_1.jpg">
-                    <img class="pic-2" src="Asset/Products/Ferrari_Hat_3.jpg">
-                </a>
-                <span class="product-hot-label">hot</span>
-                <span class="product-discount-label">-50%</span>
-                <ul class="product-links">
-                    <li><a href="#"><i class="far fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
-                </ul>
-            </div>
+            
             <div class="product-content">
+                <div class="product-image">
+                    <a href="#" class="image">
+                        <img class="pic-1" src="Asset/Products/Ferrari_Hat_1.jpg">
+                        <img class="pic-2" src="Asset/Products/Ferrari_Hat_3.jpg">
+                    </a>
+                    <span class="product-hot-label">hot</span>
+                    <span class="product-discount-label">-50%</span>
+                    <ul class="product-links">
+                        <li><a href="#"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
                 <ul class="rating">
                     <li class="fa fa-star"></li>
                     <li class="fa fa-star"></li>
@@ -643,27 +638,28 @@
                     <li>(326)</li>
                 </ul>
                 <h3 class="title"><a href="#"> Racing Is Life </a></h3>
-                <div class="price"><span>$49.00</span> $24.50</div>
-                <a href="#" class="add-to-cart">Add to cart</a>
+                <div class="price"> <span class="price-origin">$49.00</span> <span class="pricesale"> $24.50 </span></div>
+                <a class="add-to-cart">Add to cart</a>
             </div>
         </div>
     </div>
     <div class="skiing_hat">
       <div class="product-grid">
-          <div class="product-image">
-              <a href="#" class="image">
-                  <img class="pic-1" src="Asset/Products/Skiing_Hat_2.jpg">
-                  <img class="pic-2" src="Asset/Products/Skiing_Hat_4.jpg">
-              </a>
-              <span class="product-hot-label">
-                <i class="fa-solid fa-fire"></i> Special</span>
-              <span class="product-discount-label">-60%</span>
-              <ul class="product-links">
-                  <li><a href="#"><i class="far fa-heart"></i></a></li>
-                  <li><a href="#"><i class="fa fa-search"></i></a></li>
-              </ul>
-          </div>
+        
           <div class="product-content">
+            <div class="product-image">
+                <a href="#" class="image">
+                    <img class="pic-1" src="Asset/Products/Skiing_Hat_2.jpg">
+                    <img class="pic-2" src="Asset/Products/Skiing_Hat_4.jpg">
+                </a>
+                <span class="product-hot-label">
+                  <i class="fa-solid fa-fire"></i> Special</span>
+                <span class="product-discount-label">-60%</span>
+                <ul class="product-links">
+                    <li><a href="#"><i class="far fa-heart"></i></a></li>
+                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
               <ul class="rating">
                   <li class="fa fa-star"></li>
                   <li class="fa fa-star"></li>
@@ -674,27 +670,28 @@
                   <li>(2,5k)</li>
               </ul>
               <h3 class="title"><a href="#">Ski Safety</a></h3>
-              <div class="price"><span>$89.90</span> $36.50</div>
-              <a href="#" class="add-to-cart">Add to cart</a>
+              <div class="price"> <span class="price-origin">$89.90</span> <span class="pricesale"> $36.50 </span></div>
+              <a class="add-to-cart">Add to cart</a>
           </div>
       </div>
   </div>
   <div class="visor">
     <div class="product-grid">
-        <div class="product-image">
-            <a href="#" class="image">
-                <img class="pic-1" src="Asset/Products/Visors_Hat_1.jpg">
-                <img class="pic-2" src="Asset/Products/Visors_Hat_4.jpg">
-            </a>
-            <span class="product-hot-label">
-              <i class="fa-solid fa-fire"></i> Special</span>
-            <span class="product-discount-label">-60%</span>
-            <ul class="product-links">
-                <li><a href="#"><i class="far fa-heart"></i></a></li>
-                <li><a href="#"><i class="fa fa-search"></i></a></li>
-            </ul>
-        </div>
+       
         <div class="product-content">
+            <div class="product-image">
+                <a href="#" class="image">
+                    <img class="pic-1" src="Asset/Products/Visors_Hat_1.jpg">
+                    <img class="pic-2" src="Asset/Products/Visors_Hat_4.jpg">
+                </a>
+                <span class="product-hot-label">
+                  <i class="fa-solid fa-fire"></i> Special</span>
+                <span class="product-discount-label">-60%</span>
+                <ul class="product-links">
+                    <li><a href="#"><i class="far fa-heart"></i></a></li>
+                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
             <ul class="rating">
                 <li class="fa fa-star"></li>
                 <li class="fa fa-star"></li>
@@ -705,8 +702,8 @@
                 <li>(2,2k)</li>
             </ul>
             <h3 class="title"><a href="#">Tennis With Visors</a></h3>
-            <div class="price"><span>$99.90</span> $49.99</div>
-            <a href="#" class="add-to-cart">Add to cart</a>
+            <div class="price"> <span class="price-origin">$99.90</span> <span class="pricesale"> $49.99 </span></div>
+            <a class="add-to-cart">Add to cart</a>
         </div>
     </div>
   </div>
@@ -719,6 +716,17 @@
     <div id="countdown-event">
     </div>
   </div>
+  <div class="brands_title">
+    Our Partners
+  </div>
+  <div class="slide-wrapper">
+     <div class="slide"><img src="Asset/Jordan_logo_logotype.png"></div>
+     <div class="slide"><img src="Asset/nike logo.png"></div>
+     <div class="slide"><img src="Asset/ferari-kesha-ursula.jpg"></div>
+     <div class="slide"><img src="Asset/odoland.jpg"></div>
+     <div class="slide"><img src="Asset/vecteezy_puma-logo-black-symbol-with-name-clothes-design-icon_10994431.jpg"></div>
+     <div class="slide"><img src="Asset/logo brand.jpg"></div>
+   </div>
     </main>
     <!-- Footers -->
        <footer>
