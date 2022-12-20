@@ -99,7 +99,7 @@ margin-right: 30px;
 }
 .cart {
     position: fixed;
-    top:0;
+    top: 0;
     right: -100%;
     width: 23%;
     padding: 20px;
@@ -651,6 +651,7 @@ margin: 1.5rem auto 0;
         text-align: center;
         background-image: linear-gradient(to right, rgb(255, 217, 0), rgb(231, 46, 46));
         padding: 30px;
+        margin-top: 2%;
     }
     #slideshow {
         overflow: hidden;
@@ -936,7 +937,9 @@ text-align: center;
     .category-header:hover {
         font-size: 25px;
     }
-
+    .brands_title {
+        font-size: 25px;
+    }
 /*footer*/
 h2 {
     font-size: 18px;
@@ -1215,6 +1218,9 @@ footer h2 {
     grid-column-end: 5;
     grid-row-start: 36;
 }
+.brands_title {
+    margin-top: 5%;
+}
 .about-cs-container {
     grid-template-columns: repeat(4, 0.8fr);
     grid-gap: 10px;
@@ -1285,6 +1291,17 @@ footer h2 {
 .category-header:hover {
     font-size: 18px;
 }
+.brands_title {
+    margin-top: 0;
+    font-size: 18px;
+    padding: 20px;
+}
+#headline-countdown {
+    font-size: 30px;
+}
+#countdown-event {
+    font-size: 30px;
+}
 .customer-support {
     margin-top: 50px;
 }
@@ -1353,7 +1370,7 @@ footer p  {
             margin: 0px;
         }
         .row {
-            grid-template-rows: repeat(40, 2.3%);
+            grid-template-rows: repeat(39, 2.3%);
             grid-gap: 5px;
         }
         .product-grid .product-discount-label {
@@ -1365,17 +1382,19 @@ footer p  {
         .product-grid .product-hot-label {
             top: 5px;
             font-size: 12px;
-            left: 55%;
+            left: 52%;
             width: 70px;
         }
         .countdown-container {
-            padding: 10px;
+            padding: 0 10px 30px 10px;
         }
         #headline-countdown {
-            font-size: 20px;
+            font-size: 25px;
+            margin-bottom: 20px;
         }
         #countdown-event {
-            font-size: 20px;
+            font-size: 25px;
+            margin-bottom: 40px;
         }
         footer p  {
             font-size: 13px;
